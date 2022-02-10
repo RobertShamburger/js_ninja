@@ -8,6 +8,8 @@ var quiz = [
 
 var score = 0;
 
+play(quiz);
+
 function play(quiz) {
     // main game loop
     for (var i = 0, question, answer, max = quiz.length; i < max; i++) {
