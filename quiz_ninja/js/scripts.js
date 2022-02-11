@@ -1,10 +1,15 @@
 // JavaScript: Novice to Ninja 
 
-var quiz = [
-    ["What is Superman's real name?", "Clark Kent"],
-    ["What is Wonderwoman's real name?", "Diana Prince"],
-    ["What is Batman's real name?", "Bruce Wayne"]
-];
+var quiz = {
+    "name": "Super Hero Name Quiz",
+    "description": "How many super heroes can you name?",
+    "question": "What is the real name of ",
+    "questions": [
+        { "question": "Superman", "answer": "Clark Kent" },
+        { "question": "Wonder Woman", "answer": "Diana Prince" },
+        { "question": "Batman", "answer": "Bruce Wayne" }
+    ]
+}
 
 var score = 0;
 
@@ -12,20 +17,21 @@ play(quiz);
 
 function play(quiz) {
     // main game loop
-    for (var i = 0, question, answer, max = quiz.length; i < max; i++) {
-        question = quiz[i][0];
+    for (var i = 0, question, answer, max = quiz.questions.length; i < max; i++) {
+        question = quiz.quesions[i].question;
         answer = ask(question);
         check(answer);
     }
+
     // end of main game loop
     gameOver();
 
     function ask(question) {
-        return prompt(question); // quiz[i][0]
+        return prompt(quiz.question + question);
     }
 
     function check(answer) {
-        if (answer === quiz[i][1]) { // quiz[i][1] is the i-th answer
+        if (answer === quiz.question[i].answer) {
             alert("Correct!");
             // increase score by 1
             score++;
