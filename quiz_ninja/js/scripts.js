@@ -18,7 +18,7 @@ play(quiz);
 function play(quiz) {
     // main game loop
     for (var i = 0, question, answer, max = quiz.questions.length; i < max; i++) {
-        question = quiz.quesions[i].question;
+        question = quiz.questions[i].question;
         answer = ask(question);
         check(answer);
     }
