@@ -31,7 +31,7 @@ function play(quiz) {
     }
 
     function check(answer) {
-        if (answer === quiz.question[i].answer) {
+        if (answer === quiz.questions[i].answer) {
             alert("Correct!");
             // increase score by 1
             score++;
