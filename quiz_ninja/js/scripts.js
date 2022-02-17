@@ -1,5 +1,19 @@
 // JavaScript: Novice to Ninja 
+/// dom references ///
+var $question = document.getElementById("question");
+var $score = document.getElementById("score");
+var $feedback = document.getElementById("feedback");
+// view functions
+function update(element, content, klass) {
+    var p = element.firstChild || document.createElement("p");
+    p.textContent = content;
+    element.appendChild(p);
+    if(klass) {
+        p.className = klass;
+    }
+}
 
+// program refs //
 var quiz = {
     "name": "Super Hero Name Quiz",
     "description": "How many super heroes can you name?",
@@ -16,6 +30,7 @@ var score = 0;
 play(quiz);
 
 function play(quiz) {
+    update($score, score);
     // main game loop
     for (var i = 0, question, answer, max = quiz.questions.length; i < max; i++) {
         question = quiz.questions[i].question;
@@ -27,22 +42,24 @@ function play(quiz) {
     gameOver();
 
     function ask(question) {
+        update($question, quiz.question + question);
         return prompt(quiz.question + question);
     }
 
     function check(answer) {
         if (answer === quiz.questions[i].answer) {
-            alert("Correct!");
+            update($feedback, "Correct!", "right");
             // increase score by 1
             score++;
+            update($score, score);
         } else {
-            alert("Wrong?");
+            update($feedback, "Wrong!", "wrong");
         }
     }
 
     function gameOver() {
         // inform the player that the game has finished an tell them how many points they have scored
-        alert("Game Over, you scored " + score + " points");
+        update($question, "Game Over, you scored " + score + " points");
     }
 
 }
