@@ -2,5 +2,5 @@
 function doSomething() {
     console.log("Something Happend!");
 }
-
+debugger;
 addEventListener("click", doSomething);
