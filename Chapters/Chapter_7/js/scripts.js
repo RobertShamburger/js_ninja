@@ -1,6 +1,8 @@
 // simple function for EventListening
-function doSomething() {
-    console.log("Something Happend!");
+function doSomething(event) {
+    console.log(event.type + " was raised on " + event.target);
+    console.log("screen: (" + event.screenX + ", " + event.screenY + "), page: (" + event.pageX + ", " + event.pageY + "), client: (" + event.screenX + ", " + event.screenY + ")");
+    console.log(event.which);
 }
-debugger;
+
 addEventListener("click", doSomething);
