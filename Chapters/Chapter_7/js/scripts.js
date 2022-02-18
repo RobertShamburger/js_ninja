@@ -41,7 +41,7 @@ addEventListener("click", function (event) {
 });
 
 // Touch events
-addEventListener("touched", function () {
+addEventListener("touchend", function () {
     alert("Thank you!");
 });
 
