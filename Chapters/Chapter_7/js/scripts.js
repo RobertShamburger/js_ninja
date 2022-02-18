@@ -19,18 +19,20 @@ mouse.addEventListener("mouseout", highlight);
 mouse.addEventListener("mousemove", function () { console.log("You moved the mouse!") });
 
 // Key press evnt
-addEventListener("keydown", highlight);
+addEventListener("keydown", function (event) {
+    highlight;
+    if (event.keyCode == 32 && event.ctrlKey) {
+        console.log("Action cancelled?");
+    }
+ );
 addEventListener("keyup", function stop(event) {
     var date = new Date;
     console.log("You stopped pressing the key " + String.fromCharCode(event.keyCode) + " on " + date);
 });
 addEventListener("keypress", function (event) { console.log("You pressed the " + String.fromCharCode(event.charCode) + " character.") });
 
-addEventListener("keydown", function (event) {
-    if (event.keyCode == 32 && event.ctrlKey) {
-        console.log("Action cancelled?");
-    }
-});
+/*addEventListener("keydown", 
+});*/
 
 addEventListener("click", function (event) {
     if (event.shiftKey) {
