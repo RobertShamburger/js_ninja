@@ -49,12 +49,35 @@ addEventListener("touchend", function () {
 once = document.getElementById("once");
 once.addEventListener("click", remove);
 
-function remove(event){
+function remove(event) {
     console.log("Enjoy this while it lasts!");
     once.style.backgroundColor = "pink";
     once.removeEventListener("click", remove);
-    
+
 }
+
+// overwriting standard behaviour
+var broken = document.getElementById("broken");
+broken.addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("Broken Link!");
+});
+
+// bubbling demo
+ul = document.getElementById("list");
+li = document.querySelector("#list li");
+body = document.getElementById("main");
+
+ul.addEventListener("click", function (event) {
+    console.log("Clicked on ul");
+});
+li.addEventListener("click", function (event) {
+    console.log("Clicked on li");
+});
+body.addEventListener("click", function (event) {
+    console.log("Bubbled to Body");
+});
+
 
 //==========================================================
 
