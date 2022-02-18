@@ -52,7 +52,8 @@ once.addEventListener("click", remove);
 function remove(event){
     console.log("Enjoy this while it lasts!");
     once.style.backgroundColor = "pink";
-    once.removeEventListner("click", remove);
+    once.removeEventListener("click", remove);
+    
 }
 
 //==========================================================
