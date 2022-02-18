@@ -20,11 +20,11 @@ mouse.addEventListener("mousemove", function () { console.log("You moved the mou
 
 // Key press evnt
 addEventListener("keydown", function (event) {
-    highlight;
+    highlight(event);
     if (event.keyCode == 32 && event.ctrlKey) {
         console.log("Action cancelled?");
     }
- );
+});
 addEventListener("keyup", function stop(event) {
     var date = new Date;
     console.log("You stopped pressing the key " + String.fromCharCode(event.keyCode) + " on " + date);
