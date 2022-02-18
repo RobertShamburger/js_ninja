@@ -21,7 +21,7 @@ mouse.addEventListener("mousemove", function () { console.log("You moved the mou
 // Key press evnt
 addEventListener("keydown", function (event) {
     highlight(event);
-    if (event.keyCode == 32 && event.ctrlKey) {
+    if (event.keyCode == 17 && event.ctrlKey) {
         console.log("Action cancelled?");
     }
 });
