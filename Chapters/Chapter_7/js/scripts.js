@@ -22,7 +22,7 @@ mouse.addEventListener("mousemove", function () { console.log("You moved the mou
 addEventListener("keydown", function (event) {
     highlight(event);
     if (event.keyCode == 17 && event.ctrlKey) {
-        console.log("Action cancelled?");
+        console.log("Action cancelled!");
     }
 });
 addEventListener("keyup", function stop(event) {
@@ -38,6 +38,11 @@ addEventListener("click", function (event) {
     if (event.shiftKey) {
         console.log("A Shifty Click!");
     }
+});
+
+// Touch events
+addEventListener("touched", function () {
+    alert("Thank you!");
 });
 
 //==========================================================
