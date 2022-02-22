@@ -3,4 +3,4 @@ var input = form.elements["searchBox"];
 var button = form.elements["submitBtn"];
 
 
-input.addEventListener("focus", function () { debugger; alert("focused") }, false);
+button.addEventListener("focus", function () { debugger; alert("focused") }, false);
