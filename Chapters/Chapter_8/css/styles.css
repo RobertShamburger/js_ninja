@@ -8,3 +8,8 @@ p.Category {
 	padding: 3px;
 	background-color: rgb(228, 245, 245);
 }
+
+.error {
+	background: #f99;
+	border: #900 1px solid;
+}
