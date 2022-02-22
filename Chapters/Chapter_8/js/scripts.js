@@ -1,6 +1,6 @@
-var form = document.getElementsByTagname('form')["search"];
-var input = form.elements["searchBox"];
-var button = form.elements["submitBtn"];
+var myForm = document.getElementsByTagname('form')["search"];
+var input = myForm["searchBox"];
+var button = myForm["submitBtn"];
 
 
-button.addEventListener("focus", function () { debugger; alert("focused") }, false);
+input.addEventListener("focus", function () { debugger; alert("focused") }, false);
