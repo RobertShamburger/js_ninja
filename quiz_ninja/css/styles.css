@@ -20,6 +20,13 @@ section p {
     margin: 10px;
     width: 300px;
 }
+button {
+    font: bold 24px/150% Arial, Helvetica, sans-serif;
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin: 10px auto;
+}
 
 .right {
     background: #0c0;
