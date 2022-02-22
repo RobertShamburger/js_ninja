@@ -73,6 +73,7 @@ ul.addEventListener("click", function (event) {
 }, true);
 li.addEventListener("click", function (event) {
     console.log("Clicked on li");
+    event.stopPropagation();
 }, true);
 body.addEventListener("click", function (event) {
     console.log("Bubbled to Body");
