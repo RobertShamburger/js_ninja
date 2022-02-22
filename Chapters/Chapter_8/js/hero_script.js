@@ -15,5 +15,11 @@ function makeHero(event) {
             hero.powers.push(form.powers[i].value);
     }
 
+    for (i = 0; i < form.alignment.length; i++) {
+        if (form.alignment[i].checked) {
+            hero.alignment = form.alignment[i].value;
+            break;
+        }
+    }
     alert(JSON.stringify(hero)); // converts object to string and displays it in alert
 }
