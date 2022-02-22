@@ -71,6 +71,8 @@ body = document.getElementById("main");
 ul.addEventListener("click", function (event) {
     console.log("Clicked on ul");
 });
+ul.addEventListener("click", highlight);
+
 li.addEventListener("click", function (event) {
     console.log("Clicked on li");
     event.stopPropagation();
