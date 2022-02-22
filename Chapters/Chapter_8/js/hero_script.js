@@ -24,3 +24,18 @@ function makeHero(event) {
     }
     alert(JSON.stringify(hero)); // converts object to string and displays it in alert
 }
+
+form.name.addEventListener("blur", validateInline, false);
+
+function validateInline() {
+    var firstLetter = form.name.value[0];
+    debugger;
+    var label = document.querySelector("label[for=\"name\"]");
+    if (firstLetter.toUpperCase() === "X") {
+        label.classList.add("error");
+        label.textContent = "Your name is not allowed to start with X!";
+    } else {
+        label.classList.remove("error");
+        label.textContent = "Name";
+    }
+}
