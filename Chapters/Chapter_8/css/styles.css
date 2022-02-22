@@ -9,3 +9,7 @@ p {
 .highlight {
 	background-color: red;
 }
+
+label.break, button{
+	display: block;
+}
