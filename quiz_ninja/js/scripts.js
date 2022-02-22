@@ -13,8 +13,6 @@ function update(element, content, klass) {
     }
 }
 
-// Event Listner
-$start.addEventListener("click", function(){ play(quiz), false});
 
 // program refs //
 var $start = document.getElementById("start");
@@ -30,6 +28,8 @@ var quiz = {
 }
 
 var score = 0;
+// Event Listner
+$start.addEventListener("click", function(){ play(quiz), false});
 
 //play(quiz);
 
