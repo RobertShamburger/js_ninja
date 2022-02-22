@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+html {
+    background: #444;
+}
 header {
     font: bold 1.5em/120% Arial, Helvetica, sans-serif;
     background: #333;
@@ -12,7 +14,7 @@ header {
 
 body {
     width: 17em;
-    margin: 0;
+    margin: 0 auto;
     background: #fff;
     height: 100vh
 }
