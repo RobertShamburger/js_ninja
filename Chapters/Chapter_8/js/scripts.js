@@ -1,11 +1,7 @@
-var $myForm = document.getElementsByTagName("form")[0];
-var $input = $myForm["searchBox"];
-var $button = $myForm["submitBtn"];
-var para = document.getElementById("mainParagraph");
+var form = document.getElementsByTagName("form")[0];
+var input = form["searchBox"];
+var button = form["submitBtn"];
 
-$input.addEventListener("click", function () { console.log("Does the click event work work?") });
-console.log("Does anything work?");
-
-$input.addEventListener("focus", function () { alert("focused") }, false);
-
-para.addEventListener("click", function () { console.log("The paragraph was clicked") });
+input.addEventListener("focus", function () { alert("focused") }, false);
+input.addEventListener("blur", function () { alert("blurred") }, false);
+input.addEventListener("change", function () { alert("changed") }, false);
