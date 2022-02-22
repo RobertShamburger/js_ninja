@@ -1,12 +1,13 @@
 label.break, button{
 	display: block;
+	padding: 0.2em;
 }
 label.break {
-	width: 20em;
+	width: 10em;
 }
 
 p.Category {
-	width: 20em;
+	width: 10em;
 	height: 2em;
 	padding: 3px;
 	background-color: rgb(228, 245, 245);
@@ -15,4 +16,8 @@ p.Category {
 .error {
 	background: #f99;
 	border: #900 1px solid;
+}
+
+label.error {
+	width: 20em;
 }
