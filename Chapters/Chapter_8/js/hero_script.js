@@ -7,9 +7,10 @@ function makeHero(event) {
     var hero = {};
     hero.name = form.name.value; // create a name property basedd on the input field's value
     hero.realName = form.realName.value;
-
+    hero.age = form.age.value;
+    hero.city = form.city.value;
+    hero.origin = form.origin.value;
     hero.powers = [];
-
     for (i = 0; i < form.powers.length; i++) {
         if (form.powers[i].checked)
             hero.powers.push(form.powers[i].value);
