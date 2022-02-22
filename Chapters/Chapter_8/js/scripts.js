@@ -1,5 +1,5 @@
 var myForm = document.getElementsByTagname('form')["search"];
-console.log(myForm);
+console.log(toString(myForm));
 var input = myForm["searchBox"];
 var button = myForm["submitBtn"];
 
