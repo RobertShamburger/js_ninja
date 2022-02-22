@@ -5,10 +5,10 @@ var button = form["submitBtn"];
 input.addEventListener("focus", function () { alert("focused") }, false);
 input.addEventListener("blur", function () { alert("blurred") }, false);
 input.addEventListener("change", function () { alert("changed") }, false);
-form.addEventListener("submit", search(event), false);
+form.addEventListener("submit", function(event) {search(event)}, false);
 
 function search(event) {
-    debugger;
+    //debugger;
     event.preventDefault();
     alert("Form Submitted");
     return false;
