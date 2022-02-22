@@ -13,7 +13,11 @@ function update(element, content, klass) {
     }
 }
 
+// Event Listner
+$start.addEventListener("click", function(){ play(quiz), false});
+
 // program refs //
+var $start = document.getElementById("start");
 var quiz = {
     "name": "Super Hero Name Quiz",
     "description": "How many super heroes can you name?",
@@ -27,7 +31,7 @@ var quiz = {
 
 var score = 0;
 
-play(quiz);
+//play(quiz);
 
 function play(quiz) {
     update($score, score);
