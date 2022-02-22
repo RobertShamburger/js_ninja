@@ -1,6 +1,9 @@
 label.break, button{
 	display: block;
 }
+label.break {
+	width: 20em;
+}
 
 p.Category {
 	width: 20em;
