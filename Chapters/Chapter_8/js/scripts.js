@@ -9,7 +9,7 @@ form.addEventListener("submit", function(event) {search(event)}, false);
 
 function search(event) {
     //debugger;
-    event.preventDefault();
+    //event.preventDefault();
     alert("Form Submitted");
     return false;
 }
