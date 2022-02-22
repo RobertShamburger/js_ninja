@@ -94,7 +94,7 @@ function play(quiz) {
         }
 
         i++;
-        if (i === quiz.question.length) {
+        if (i === quiz.questions.length) {
             gameOver();
         } else {
             chooseQuestion();
